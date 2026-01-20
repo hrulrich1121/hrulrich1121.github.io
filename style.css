@@ -1,1 +1,147 @@
+/* style.css */
+/* Simple, clean, readable layout for your Media & Technology page */
+
+:root {
+  --bg: #0f172a;          /* deep navy */
+  --card: #111827;        /* dark slate */
+  --text: #e5e7eb;        /* light gray */
+  --muted: #cbd5e1;       /* muted text */
+  --accent: #60a5fa;      /* soft blue */
+  --border: rgba(255, 255, 255, 0.10);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: radial-gradient(1200px 600px at 10% 0%, rgba(96,165,250,0.15), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,0.10), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  padding: 32px 16px;
+}
+
+/* Page width + centered layout */
+body > section {
+  max-width: 900px;
+  margin: 0 auto 22px auto;
+  padding: 22px 22px;
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 2.2vw, 2.3rem);
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  margin-top: 6px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 16px;
+  color: var(--text);
+}
+
+h4 {
+  font-size: 1rem;
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* Paragraphs */
+p {
+  margin: 10px 0 0 0;
+  color: var(--muted);
+}
+
+/* Image styling (Section 1) */
+img {
+  display: block;
+  width: min(260px, 100%);
+  height: auto;
+  margin: 14px 0 14px 0;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* Media usage section */
+#media-usage {
+  margin-top: 12px;
+}
+
+/* Make each category look like a "card" inside the section */
+.media-category {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+/* Accent the category title */
+.media-category > h3 {
+  margin-top: 0;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+/* Subcategory spacing */
+.media-subcategory {
+  margin-top: 10px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(96, 165, 250, 0.25);
+}
+
+/* Lists */
+ul {
+  margin: 8px 0 0 0;
+  padding-left: 22px;
+}
+
+li {
+  margin: 6px 0;
+  color: var(--text);
+}
+
+/* Optional: slightly soften nested section spacing if you keep nested <section> tags */
+section section {
+  margin-top: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 18px 10px;
+  }
+
+  body > section {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .media-category {
+    padding: 14px;
+  }
+}
 
